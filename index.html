@@ -49,28 +49,56 @@ body {
 
 /* ── Page Header ── */
 .page-header {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.75rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--border);
 }
 
 .page-title {
-  font-size: 1.15rem;
+  font-size: 1.2rem;
   font-weight: 800;
   color: var(--text-bright);
   letter-spacing: -0.01em;
   line-height: 1.3;
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.15rem;
+}
+
+.page-subtitle {
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  margin-bottom: 0.85rem;
 }
 
 .page-desc {
-  font-size: 0.78rem;
+  font-size: 0.76rem;
   color: var(--text-muted);
-  line-height: 1.7;
-  max-width: 580px;
+  line-height: 1.75;
 }
 
 .page-desc strong {
   color: var(--text);
   font-weight: 650;
+}
+
+.page-highlights {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.85rem;
+  flex-wrap: wrap;
+}
+
+.page-highlight-chip {
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  padding: 0.3rem 0.65rem;
+  border-radius: 5px;
+  background: var(--accent-dim);
+  border: 1px solid rgba(99,140,255,0.15);
+  color: var(--accent);
 }
 
 /* ── Wrapper ── */
@@ -671,7 +699,14 @@ body {
 <div class="tracker-wrap">
   <div class="page-header">
     <h1 class="page-title">Adaptive Domain Classification Simulator</h1>
-    <p class="page-desc">This simulator demonstrates how <strong>Item Response Theory (IRT)</strong> and <strong>Computerized Adaptive Testing (CAT)</strong> pinpoint a learner's specific weaknesses across clinical domains. Rather than giving every learner the same test, the algorithm adapts in real time — selecting harder or easier items based on each response, narrowing confidence intervals, and independently classifying each domain as Strong, Developing, or Gap. The result is a precise competency profile that identifies exactly where continuing education should be focused.</p>
+    <div class="page-subtitle">Item Response Theory &middot; Computerized Adaptive Testing</div>
+    <p class="page-desc">Every learner has different strengths and gaps. Instead of a one-size-fits-all exam, this engine uses <strong>IRT</strong> and <strong>CAT</strong> to adapt in real time, selecting items based on each response to zero in on exactly where a learner needs work. Each clinical domain is classified independently, producing a precise competency profile that drives targeted continuing education.</p>
+    <div class="page-highlights">
+      <span class="page-highlight-chip">Real-Time Adaptation</span>
+      <span class="page-highlight-chip">Per-Domain Classification</span>
+      <span class="page-highlight-chip">Confidence Intervals</span>
+      <span class="page-highlight-chip">Targeted CE Recommendations</span>
+    </div>
   </div>
 
   <div class="tracker-controls">
